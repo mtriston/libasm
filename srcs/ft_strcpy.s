@@ -13,6 +13,6 @@ while:
 			jmp while
 end:
 			mov byte[rdi + rcx], 0			; end of string
-			mov rax, rdi
+			mov rax, rdi					; return pointer of rdi (dest)
 			ret	
 
