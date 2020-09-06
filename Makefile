@@ -17,7 +17,7 @@ endif
 CC = clang
 CFLAGS = -Wall -Wextra -Werror
 
-FILES = ft_strlen ft_strcpy ft_strcmp ft_write
+FILES = ft_strlen ft_strcpy ft_strcmp ft_write ft_read ft_strdup
 
 SRC_FILES = $(addsuffix .s, $(addprefix $(SRC_DIR), $(FILES)))
 
@@ -49,5 +49,5 @@ re: fclean all
 bonus: all
 	
 test: all
-	@$(CC) $(CLAGS) main.c -o test -L. -lasm
-	@echo "Program for testing was compiled"
+	@$(CC) $(CLAGS) ./test/*.c -o check_me -L. -lasm
+	@./check_me
